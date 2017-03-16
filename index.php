@@ -7,8 +7,11 @@ $users = array(
     'abatakov' => 'DEV',
     'akatelnikov' => 'DEV',
     'ayarygin' => 'DEV',
+    'drubanov' => 'DEV',
+    'ekoshel' => 'DEV',
     'iknyazhesky' => 'DEV',
     'kdereshov' => 'DEV',
+    'msorokovikov' => 'DEV',
     'epetrov' => 'OPS',
     'pserenko' => 'OPS'
     );
@@ -166,7 +169,7 @@ foreach ($users as $user => $dep)
             <hr>
         <div class="col-sm-12">
                 <table class="table table-bordered table-striped" style="margin: 0;" data-toggle="table">
-                   <caption><h4>Employee performance table</h4></caption>
+                   <caption><h4>&nbsp Employee performance table</h4></caption>
                 <thead>
 		<th data-field="dep" data-sortable="true">Department</th>
                 <th data-field="name" data-sortable="true">Employee Name</th>
@@ -199,7 +202,7 @@ foreach ($users as $user => $dep)
             <?php endforeach?>
             </tbody>
         </table>
-	<table class="table table-bordered table-striped" style="margin: 0;">
+	<table class="table table-bordered" style="margin: 0;">
                 <tbody>
             <tr>
 		<td>

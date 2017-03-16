@@ -16,6 +16,7 @@ $users = array(
     'pserenko' => 'OPS'
     );
 
+$year = strftime('%Y');
 $start_date = isset($_POST['start_date']) ? $_POST['start_date'] : date('Y-m-01');
 $end_date = isset($_POST['end_date']) ? $_POST['end_date'] : date('Y-m-d');
 
@@ -249,7 +250,7 @@ foreach ($users as $user => $dep)
     </div>
 <footer class="footer-basic-centered">
         <p class="footer-company-motto">Simply do your best.</p>
-        <p class="footer-company-name">Rollersoft &copy; 2016</p>
+        <p class="footer-company-name">Rollersoft &copy; <?= $year ?></p>
 </footer>
     <!-- /.container -->
 

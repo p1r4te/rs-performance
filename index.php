@@ -1,8 +1,9 @@
 ﻿<?php
 session_start();
 $users = array(
+    'akuksov' => 'QA',
     'atarasov' => 'QA',
-    'asidelnikov' => 'QA',
+    'glebgapich' => 'QA',
     'dbiryulin' => 'QA',
     'abatakov' => 'DEV',
     'akatelnikov' => 'DEV',

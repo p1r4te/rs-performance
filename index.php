@@ -7,7 +7,6 @@ $users = array(
     'dbiryulin' => 'QA',
     'abatakov' => 'DEV',
     'akatelnikov' => 'DEV',
-    'ayarygin' => 'DEV',
     'drubanov' => 'DEV',
     'ekoshel' => 'DEV',
     'iknyazhesky' => 'DEV',

@@ -69,6 +69,9 @@ function getResolved($user, $start_date, $end_date)
     return getTotalFromJira($url_resolved);
 }
 
+$total = $closed = $resolved = [];
+$sum = ['total' => 0, 'closed' => 0, 'resolved' => 0];
+
 foreach ($users as $user => $dep)
 {
     $total[$user] = getTotal($user, $start_date, $end_date);

@@ -59,7 +59,7 @@ function getTotal($user, $start_date, $end_date)
 
 function getClosed($user, $start_date, $end_date)
 {
-    $url_closed = 'https://acesse.atlassian.net/rest/api/2/search?maxResults=0&fields=id&jql=status+was+Closed+AND+status+was+Resolved+BY+'.$user.'+DURING('.$start_date.','.$end_date.')';
+    $url_closed = 'https://acesse.atlassian.net/rest/api/2/search?maxResults=0&fields=id&jql=status+was+Closed+BY+'.$user.'+AND+status+changed+DURING('.$start_date.','.$end_date.')';
     return getTotalFromJira($url_closed);
 }
 

@@ -13,7 +13,8 @@ $users = array(
     'kdereshov' => 'DEV',
     'msorokovikov' => 'DEV',
     'epetrov' => 'OPS',
-    'pserenko' => 'OPS'
+    'pserenko' => 'OPS',
+    'anvodola' => 'OPS'
     );
 
 $year = strftime('%Y');

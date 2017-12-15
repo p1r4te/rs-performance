@@ -1,16 +1,18 @@
 ﻿<?php
 session_start();
 $users = array(
+    'golovaneva.93' => 'QA',
     'akuksov' => 'QA',
     'atarasov' => 'QA',
     'glebgapich' => 'QA',
-    'dbiryulin' => 'QA',
+    'ishalanova' => 'QA',
     'abatakov' => 'DEV',
     'akatelnikov' => 'DEV',
     'drubanov' => 'DEV',
     'ekoshel' => 'DEV',
     'iknyazhesky' => 'DEV',
     'kdereshov' => 'DEV',
+    'kseniya.polyanskaya.1994' => 'DEV',
     'msorokovikov' => 'DEV',
     'epetrov' => 'OPS',
     'pserenko' => 'OPS',

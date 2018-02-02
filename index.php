@@ -14,6 +14,7 @@ $users = array(
     'kdereshov' => 'DEV',
     'kseniya.polyanskaya.1994' => 'DEV',
     'msorokovikov' => 'DEV',
+    'sandruschak' => 'DEV',
     'epetrov' => 'OPS',
     'pserenko' => 'OPS',
     'anvodola' => 'OPS'

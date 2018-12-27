@@ -1,22 +1,16 @@
 ﻿<?php
 session_start();
 $users = array(
-    'golovaneva.93' => 'QA',
     'akuksov' => 'QA',
     'atarasov' => 'QA',
-    'glebgapich' => 'QA',
-    'ishalanova' => 'QA',
+    'edgar.simonyan' => 'QA',
     'abatakov' => 'DEV',
-    'akatelnikov' => 'DEV',
     'drubanov' => 'DEV',
     'ekoshel' => 'DEV',
     'iknyazhesky' => 'DEV',
-    'kdereshov' => 'DEV',
     'kseniya.polyanskaya.1994' => 'DEV',
-    'msorokovikov' => 'DEV',
     'sandruschak' => 'DEV',
     'epetrov' => 'OPS',
-    'pserenko' => 'OPS',
     'anvodola' => 'OPS'
     );
 
@@ -33,11 +27,10 @@ function getAccount()
     return $_SESSION['login'] . ':' . $_SESSION['password'];
 }
 
-function getTotalFromJira($url)
+/*function getTotalFromJira($url)
 {
     $ch = curl_init($url);
     $account = getAccount();
-
     curl_setopt($ch, CURLOPT_USERPWD, $account);
     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -54,6 +47,31 @@ function getTotalFromJira($url)
     $total = $json->total;
     return $total;
 }
+*/
+
+function getTotalFromJira($url)
+    {
+        $ch = curl_init($url);
+        $account = getAccount();
+
+        curl_setopt($ch, CURLOPT_USERPWD, $account);
+        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($ch);
+        $json = json_decode($response, true);
+/*        if (empty($json))
+	
+        {
+            if (!isset($_SESSION['reason'])) {
+                $_SESSION['reason'] = 'Wrong username or password. Try again please.';
+            }
+            header("Location: login.php");
+            exit();
+        }
+*/
+        $total = isset($json['total'])?$json['total']:0;
+        return $total;
+    }
 
 function getTotal($user, $start_date, $end_date)
 {

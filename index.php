@@ -2,11 +2,12 @@
 session_start();
 $users = array(
     'akuksov' => 'QA',
-    'atarasov' => 'QA',
+    'atarasov' => 'DEV',
     'edgar.simonyan' => 'QA',
     'abatakov' => 'DEV',
     'drubanov' => 'DEV',
     'ekoshel' => 'DEV',
+    'qa.grigoriev.as' => 'DEV',
     'iknyazhesky' => 'DEV',
     'sandruschak' => 'DEV',
     'epetrov' => 'OPS',

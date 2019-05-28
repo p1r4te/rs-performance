@@ -36,7 +36,7 @@
                         <!-- Button -->
                         <div class="col-sm-12 controls">
                         	<button type="submit" href="#" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i> Log in</button>
-                        	<p class="text-danger"><?php echo $_SESSION['reason']?></p>
+                        	<p class="text-danger"><?php echo $_SESSION['reason'] ?></p>
                         </div>
                     </div>
 

@@ -61,6 +61,7 @@ function getTotalFromJira($url)
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         $response = curl_exec($ch);
+        var_dump($response);
         $json = json_decode($response, true);
 /*        if (empty($json))
 	

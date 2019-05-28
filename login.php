@@ -29,7 +29,7 @@
 
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="mypassword" type="password" class="form-control" name="mypassword" placeholder="Your Jira Password">
+                        <input id="mypassword" type="password" class="form-control" name="mypassword" placeholder="Your Jira Token">
                     </div>
 
                     <div class="form-group">

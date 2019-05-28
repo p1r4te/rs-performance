@@ -11,7 +11,8 @@ $users = array(
     'iknyazhesky' => 'DEV',
     'sandruschak' => 'DEV',
     'epetrov' => 'OPS',
-    'anvodola' => 'OPS'
+    'anvodola' => 'OPS',
+    'maxibonko1995' => 'DEV',
     );
 
 $year = strftime('%Y');
@@ -48,15 +49,17 @@ function getAccount()
     return $total;
 }
 */
+//curl -u username:password -X GET -H "Content-Type: application/json" http://localhost:8080/rest/api/2/issue/createmeta
 
 function getTotalFromJira($url)
     {
         $ch = curl_init($url);
-        $account = getAccount();
+        $account = base64_encode(getAccount());
 
-        curl_setopt($ch, CURLOPT_USERPWD, $account);
-        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+        $headers[] = 'Content-Type: application/json';
+        $headers[] = 'Authorization: Basic '.$account;
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         $response = curl_exec($ch);
         $json = json_decode($response, true);
 /*        if (empty($json))

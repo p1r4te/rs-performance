@@ -13,7 +13,7 @@
 <div class="container">
     <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> 
         <div class="row" align="center">
-	<img src="../img/login.png" width="175" height="175"></img>
+	<img src="../img/login.png" width="175" height="175"/>
         </div>
         <div class="panel panel-default" >
             <div class="panel-heading">
@@ -36,7 +36,7 @@
                         <!-- Button -->
                         <div class="col-sm-12 controls">
                         	<button type="submit" href="#" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i> Log in</button>
-                        	<p class="text-danger"><?php echo $_SESSION['reason'] ?></p>
+                        	<p class="text-danger"><?php  echo $_SESSION['reason']?></p>
                         </div>
                     </div>
 

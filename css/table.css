@@ -2,3 +2,6 @@
 .table-striped>tbody>tr:nth-child(odd)>th {
    background-color: #DBDBDB; // Choose your own color here
  }
+.fixed-table-body {
+    height: auto !important;
+}

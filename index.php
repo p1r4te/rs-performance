@@ -28,51 +28,21 @@ function getAccount()
     return $_SESSION['login'] . ':' . $_SESSION['password'];
 }
 
-/*function getTotalFromJira($url)
-{
-    $ch = curl_init($url);
-    $account = getAccount();
-    curl_setopt($ch, CURLOPT_USERPWD, $account);
-    curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $response = curl_exec($ch);
-    $json = json_decode($response);
-    if (!$json) 
-    {
-        if (!isset($_SESSION['reason'])) {
-            $_SESSION['reason'] = 'Wrong username or password. Try again please.';
-        }
-        header("Location: login.php");
-        exit();
-    }
-    $total = $json->total;
-    return $total;
-}
-*/
-//curl -u username:password -X GET -H "Content-Type: application/json" http://localhost:8080/rest/api/2/issue/createmeta
-
 function getTotalFromJira($url)
     {
         $ch = curl_init($url);
-        $account = base64_encode(getAccount());
+        $account = getAccount();
+        if ($account == ':') {
+            header('Location: login.php');
+        }
+        $encodeAccount = base64_encode($account);
 
         $headers[] = 'Content-Type: application/json';
-        $headers[] = 'Authorization: Basic '.$account;
+        $headers[] = 'Authorization: Basic '.$encodeAccount;
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         $response = curl_exec($ch);
-        var_dump($response);
         $json = json_decode($response, true);
-/*        if (empty($json))
-	
-        {
-            if (!isset($_SESSION['reason'])) {
-                $_SESSION['reason'] = 'Wrong username or password. Try again please.';
-            }
-            header("Location: login.php");
-            exit();
-        }
-*/
         $total = isset($json['total'])?$json['total']:0;
         return $total;
     }

@@ -31,7 +31,9 @@
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                         <input id="mypassword" type="password" class="form-control" name="mypassword" placeholder="Your Jira Token">
                     </div>
-
+			<div class="alert alert-info" role="alert">
+				Для получения доступа к статистике необходимо сгенерировать <a href="https://id.atlassian.com/manage/api-tokens">токен</a>	
+			</div>
                     <div class="form-group">
                         <!-- Button -->
                         <div class="col-sm-12 controls">

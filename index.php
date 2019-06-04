@@ -5,14 +5,15 @@ $users = array(
     'atarasov' => 'DEV',
     'edgar.simonyan' => 'QA',
     'abatakov' => 'DEV',
+    'andreyrodko' => 'DEV',
     'drubanov' => 'DEV',
     'ekoshel' => 'DEV',
-    'qa.grigoriev.as' => 'DEV',
+    'qa.grigoriev.as' => 'QA',
     'iknyazhesky' => 'DEV',
+    'maxibonko1995' => 'DEV',
     'sandruschak' => 'DEV',
     'epetrov' => 'OPS',
     'anvodola' => 'OPS',
-    'maxibonko1995' => 'DEV',
     );
 
 $year = strftime('%Y');

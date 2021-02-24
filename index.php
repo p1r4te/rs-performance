@@ -1,10 +1,28 @@
 ﻿<?php
 session_start();
 $users = array(
-    '5f757fd6bd1298006fbfe687' => 'QA Mazikin',
+    '5f757fd6bd1298006fbfe687' => 'Mazikin A.',
+    'edgar.simonyan' => 'Simonyan E.',
+    'yreutova' => 'Reutova Y.',
+    '5e5e6a93bbb5110c9a691e79' => 'Kuzminova Y.',
+    'abatakov' => 'Batakov A.',
+    'andreyrodko' => 'Rodko A.',
+    'drubanov' => 'Rubanov D.',
+    'ekoshel' => 'Koshel E.',
+    'atarasov' => 'Tarasov A.',
+    'iknyazhesky' => 'Knyazhesky I.',
+    'sandruschak' => 'Andruschak S.',
+    'aleksandrdergelev' => 'Dergelev A.',
+    '88fd63c1-b4e2-40d1-8c09-05631b00540c' => 'OPS',
+    'anvodola' => 'Vodolazsky A.',
+    '5f1e7c78ef11df00257efd6f' => 'Novikov S.',
+    );
+
+$users_in_dep = [
+    '5f757fd6bd1298006fbfe687' => 'QA',
     'edgar.simonyan' => 'QA',
     'yreutova' => 'QA',
-    '5e5e6a93bbb5110c9a691e79' => 'QA Kuzminova',
+    '5e5e6a93bbb5110c9a691e79' => 'QA',
     'abatakov' => 'DEV',
     'andreyrodko' => 'DEV',
     'drubanov' => 'DEV',
@@ -15,7 +33,8 @@ $users = array(
     'aleksandrdergelev' => 'DEV',
     '88fd63c1-b4e2-40d1-8c09-05631b00540c' => 'OPS',
     'anvodola' => 'OPS',
-    );
+    '5f1e7c78ef11df00257efd6f' => 'Dev Novikov',
+];
 
 $year = strftime('%Y');
 $start_date = isset($_POST['start_date']) ? $_POST['start_date'] : date('Y-m-01');
@@ -216,7 +235,7 @@ foreach ($users as $user => $dep)
             <?php foreach ($users as $user => $dep):?>
             <tr>
 		<td>
-		    <?=$dep?>
+		    <?=$users_in_dep[$user]?>
 		</td>
                 <td>
                     <?=$user?>

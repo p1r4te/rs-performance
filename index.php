@@ -1,21 +1,25 @@
 ﻿<?php
 session_start();
+//$users = array(
+//    '5f757fd6bd1298006fbfe687' => 'QA Mazikin',
+//    'edgar.simonyan' => 'QA',
+//    'yreutova' => 'QA',
+//    '5e5e6a93bbb5110c9a691e79' => 'QA Kuzminova',
+//    'abatakov' => 'DEV',
+//    'andreyrodko' => 'DEV',
+//    'drubanov' => 'DEV',
+//    'ekoshel' => 'DEV',
+//    'atarasov' => 'DEV',
+//    'iknyazhesky' => 'DEV',
+//    'sandruschak' => 'DEV',
+//    'aleksandrdergelev' => 'DEV',
+//    '88fd63c1-b4e2-40d1-8c09-05631b00540c' => 'OPS',
+//    'anvodola' => 'OPS',
+//    );
+
 $users = array(
-    '5f757fd6bd1298006fbfe687' => 'QA Mazikin',
-    'edgar.simonyan' => 'QA',
-    'yreutova' => 'QA',
-    '5e5e6a93bbb5110c9a691e79' => 'QA Kuzminova',
-    'abatakov' => 'DEV',
-    'andreyrodko' => 'DEV',
-    'drubanov' => 'DEV',
-    'ekoshel' => 'DEV',
-    'atarasov' => 'DEV',
-    'iknyazhesky' => 'DEV',
-    'sandruschak' => 'DEV',
-    'aleksandrdergelev' => 'DEV',
-    '88fd63c1-b4e2-40d1-8c09-05631b00540c' => 'OPS',
-    'anvodola' => 'OPS',
-    );
+    'Andrey Batakov' => 'DEV',
+);
 
 $year = strftime('%Y');
 $start_date = isset($_POST['start_date']) ? $_POST['start_date'] : date('Y-m-01');

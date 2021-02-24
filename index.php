@@ -35,6 +35,7 @@ function getAccount()
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_VERBOSE, true);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
 
     $response = curl_exec($ch);
 

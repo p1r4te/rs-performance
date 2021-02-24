@@ -42,6 +42,13 @@ $end_date = isset($_POST['end_date']) ? $_POST['end_date'] : date('Y-m-d');
 
 function checkLogin()
 {
+
+    if (strpos($_POST['myusername'], "@") == false) {
+        $_SESSION['ERRORS'] = "Логин, должен быть емейлом.";
+        header('Location: login.php');
+        return false;
+    }
+
     $encodeAccount = base64_encode("{$_POST['myusername']}:{$_POST['mypassword']}");
 
     $headers[] = 'Content-Type: application/json';

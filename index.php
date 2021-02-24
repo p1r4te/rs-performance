@@ -33,7 +33,7 @@ $users_in_dep = [
     'aleksandrdergelev' => 'DEV',
     '88fd63c1-b4e2-40d1-8c09-05631b00540c' => 'OPS',
     'anvodola' => 'OPS',
-    '5f1e7c78ef11df00257efd6f' => 'Dev Novikov',
+    '5f1e7c78ef11df00257efd6f' => 'Dev',
 ];
 
 $year = strftime('%Y');

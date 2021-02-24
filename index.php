@@ -1,18 +1,19 @@
 ﻿<?php
 session_start();
 $users = array(
-    'akuksov' => 'QA',
-    'atarasov' => 'DEV',
+    'amazikin' => 'QA',
     'edgar.simonyan' => 'QA',
     'yreutova' => 'QA',
+    '5e5e6a93bbb5110c9a691e79' => 'QA Kuzminova',
     'abatakov' => 'DEV',
     'andreyrodko' => 'DEV',
     'drubanov' => 'DEV',
     'ekoshel' => 'DEV',
-    'qa.grigoriev.as' => 'QA',
+    'atarasov' => 'DEV',
     'iknyazhesky' => 'DEV',
     'sandruschak' => 'DEV',
-    'epetrov' => 'OPS',
+    'aleksandrdergelev' => 'DEV',
+    '88fd63c1-b4e2-40d1-8c09-05631b00540c' => 'OPS',
     'anvodola' => 'OPS',
     );
 

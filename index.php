@@ -5,6 +5,8 @@ $users = array(
     'edgar.simonyan' => 'Simonyan E.',
     'yreutova' => 'Reutova Y.',
     '5e5e6a93bbb5110c9a691e79' => 'Kuzminova Y.',
+    '5f19338a07efc40028615c3a' => 'Bondarev V.',
+    '5f0573e9502ce1001dd5fabd' => 'Kallas V.',
 
     'abatakov' => 'Batakov A.',
     'andreyrodko' => 'Rodko A.',
@@ -25,6 +27,8 @@ $users_in_dep = [
     'edgar.simonyan' => 'QA',
     'yreutova' => 'QA',
     '5e5e6a93bbb5110c9a691e79' => 'QA',
+    '5f19338a07efc40028615c3a' => 'QA',
+    '5f0573e9502ce1001dd5fabd' => 'QA',
 
     'abatakov' => 'DEV',
     'andreyrodko' => 'DEV',

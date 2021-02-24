@@ -24,9 +24,9 @@
                 <form name="reg" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST" action="index.php">
                     <?php if (isset($_SESSION['ERRORS'])): ?>
                     <div class="alert alert-danger" role="alert">
-                        <?= $_SESSION['ERRORS'] ?>
+                        <?=$_SESSION['ERRORS'] ?>
                     </div>
-                    <? endif ?>
+                    <?php endif ?>
 
 
                     <div class="input-group">

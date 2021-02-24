@@ -21,9 +21,28 @@ $year = strftime('%Y');
 $start_date = isset($_POST['start_date']) ? $_POST['start_date'] : date('Y-m-01');
 $end_date = isset($_POST['end_date']) ? $_POST['end_date'] : date('Y-m-d');
 
+function checkLogin()
+{
+    $encodeAccount = base64_encode("{$_POST['myusername']}:{$_POST['mypassword']}");
+
+    $headers[] = 'Content-Type: application/json';
+    $headers[] = 'Authorization: Basic '.$encodeAccount;
+
+    $ch = curl_init("https://acesse.atlassian.net");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+    $response = curl_exec($ch);
+var_dump($response);die;
+
+    return true;
+}
+
 function getAccount()
 {
-    if (isset($_POST['myusername']) && isset($_POST['mypassword'])) {
+    if (isset($_POST['myusername']) && isset($_POST['mypassword']) && checkLogin()) {
         $_SESSION['login'] = $_POST['myusername'];
         $_SESSION['password'] = $_POST['mypassword'];
     }

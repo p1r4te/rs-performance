@@ -24,7 +24,7 @@
                 <form name="reg" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST" action="index.php">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="myusername" type="text" class="form-control" name="myusername" value="" placeholder="Your Jira Username">
+                        <input id="myusername" type="text" class="form-control" name="myusername" value="" placeholder="Your Email in Jira">
                     </div>
 
                     <div class="input-group">

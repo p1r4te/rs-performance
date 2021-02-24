@@ -5,6 +5,7 @@ $users = array(
     'edgar.simonyan' => 'Simonyan E.',
     'yreutova' => 'Reutova Y.',
     '5e5e6a93bbb5110c9a691e79' => 'Kuzminova Y.',
+
     'abatakov' => 'Batakov A.',
     'andreyrodko' => 'Rodko A.',
     'drubanov' => 'Rubanov D.',
@@ -13,9 +14,10 @@ $users = array(
     'iknyazhesky' => 'Knyazhesky I.',
     'sandruschak' => 'Andruschak S.',
     'aleksandrdergelev' => 'Dergelev A.',
+    '5f1e7c78ef11df00257efd6f' => 'Novikov S.',
+
     '88fd63c1-b4e2-40d1-8c09-05631b00540c' => 'OPS',
     'anvodola' => 'Vodolazsky A.',
-    '5f1e7c78ef11df00257efd6f' => 'Novikov S.',
     );
 
 $users_in_dep = [
@@ -23,6 +25,7 @@ $users_in_dep = [
     'edgar.simonyan' => 'QA',
     'yreutova' => 'QA',
     '5e5e6a93bbb5110c9a691e79' => 'QA',
+
     'abatakov' => 'DEV',
     'andreyrodko' => 'DEV',
     'drubanov' => 'DEV',
@@ -31,9 +34,10 @@ $users_in_dep = [
     'iknyazhesky' => 'DEV',
     'sandruschak' => 'DEV',
     'aleksandrdergelev' => 'DEV',
+    '5f1e7c78ef11df00257efd6f' => 'DEV',
+
     '88fd63c1-b4e2-40d1-8c09-05631b00540c' => 'OPS',
     'anvodola' => 'OPS',
-    '5f1e7c78ef11df00257efd6f' => 'Dev',
 ];
 
 $year = strftime('%Y');

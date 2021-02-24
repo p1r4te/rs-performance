@@ -223,7 +223,7 @@ foreach ($users as $user => $dep)
                    <caption><h4>&nbsp Employee performance table</h4></caption>
                 <thead>
 		<th data-field="dep" data-sortable="true">Department</th>
-                <th data-field="name" data-sortable="true">Employee Name</th>
+                <th data-field="name" data-sortable="true">Employee Name.</th>
                 <th data-field="total" data-sortable="true">Issues Total</th>
                 <th data-field="closed" data-sortable="true">Issues Closed</th>
                 <th data-field="resolved" data-sortable="true">Issues Resolved/Verified</th>

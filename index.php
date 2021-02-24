@@ -223,7 +223,7 @@ foreach ($users as $user => $dep)
                    <caption><h4>&nbsp Employee performance table</h4></caption>
                 <thead>
 		<th data-field="dep" data-sortable="true">Department</th>
-                <th data-field="name" data-sortable="true">Employee Name.</th>
+                <th data-field="name" data-sortable="true">Employee Name</th>
                 <th data-field="total" data-sortable="true">Issues Total</th>
                 <th data-field="closed" data-sortable="true">Issues Closed</th>
                 <th data-field="resolved" data-sortable="true">Issues Resolved/Verified</th>
@@ -232,13 +232,13 @@ foreach ($users as $user => $dep)
             <?php if ($start_date and $end_date):?>
             <div class="alert alert-info" role="alert">Period from <?=$start_date?> to <?=$end_date?></div>
             <?php endif?>
-            <?php foreach ($users as $user => $dep):?>
+            <?php foreach ($users as $user => $name):?>
             <tr>
 		<td>
 		    <?=$users_in_dep[$user]?>
 		</td>
                 <td>
-                    <?=$user?>
+                    <?=$name?>
                 </td>
                 <td>
                     <?=$total[$user]?>

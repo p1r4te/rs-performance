@@ -22,6 +22,13 @@
             <div class="panel-body" >
 
                 <form name="reg" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST" action="index.php">
+                    <?php if (isset($_SESSION['ERRORS'])): ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?= $_SESSION['ERRORS'] ?>
+                    </div>
+                    <? endif ?>
+
+
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                         <input id="myusername" type="text" class="form-control" name="myusername" value="" placeholder="Your Email in Jira">

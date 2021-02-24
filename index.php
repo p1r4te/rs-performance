@@ -35,7 +35,13 @@ function checkLogin()
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
     $response = curl_exec($ch);
-var_dump($response);die;
+
+    if (strpos($response, "Basic authentication with passwords is deprecated") !== false) {
+        $_SESSION['ERRORS'] = "Неправильный логин или пароль.";
+        header('Location: login.php');
+        return false;
+    }
+    $_SESSION['ERRORS'] = null;
 
     return true;
 }

@@ -43,15 +43,12 @@ function getTotalFromJira($url)
         $headers[] = 'Content-Type: application/json';
         $headers[] = 'Authorization: Basic '.$encodeAccount;
 
-        var_dump($headers);
-
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
         $response = curl_exec($ch);
-        echo "<br> URL: $url <br><br>$response<br><br><br><br>";
         $json = json_decode($response, true);
         $total = isset($json['total'])?$json['total']:0;
         return $total;

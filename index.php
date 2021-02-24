@@ -176,13 +176,13 @@ foreach ($users as $user => $dep)
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                 </button>
-                <a class="navbar-brand" href="#"><img alt="Acesse" src="img/logo.png"></a>
+                <a class="navbar-brand" href="#"><img alt="Adx" src="img/logo.png"></a>
 
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="https://acesse.com">Acesse</a></li>
+                    <li><a href="https://acesse.com">Adx</a></li>
                     <li><a href="https://acesse.atlassian.net/projects/AM/issues/">Jira</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

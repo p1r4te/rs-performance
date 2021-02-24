@@ -1,25 +1,21 @@
 ﻿<?php
 session_start();
-//$users = array(
-//    '5f757fd6bd1298006fbfe687' => 'QA Mazikin',
-//    'edgar.simonyan' => 'QA',
-//    'yreutova' => 'QA',
-//    '5e5e6a93bbb5110c9a691e79' => 'QA Kuzminova',
-//    'abatakov' => 'DEV',
-//    'andreyrodko' => 'DEV',
-//    'drubanov' => 'DEV',
-//    'ekoshel' => 'DEV',
-//    'atarasov' => 'DEV',
-//    'iknyazhesky' => 'DEV',
-//    'sandruschak' => 'DEV',
-//    'aleksandrdergelev' => 'DEV',
-//    '88fd63c1-b4e2-40d1-8c09-05631b00540c' => 'OPS',
-//    'anvodola' => 'OPS',
-//    );
-
 $users = array(
-    '"Andrey Batakov"' => 'DEV',
-);
+    '5f757fd6bd1298006fbfe687' => 'QA Mazikin',
+    'edgar.simonyan' => 'QA',
+    'yreutova' => 'QA',
+    '5e5e6a93bbb5110c9a691e79' => 'QA Kuzminova',
+    'abatakov' => 'DEV',
+    'andreyrodko' => 'DEV',
+    'drubanov' => 'DEV',
+    'ekoshel' => 'DEV',
+    'atarasov' => 'DEV',
+    'iknyazhesky' => 'DEV',
+    'sandruschak' => 'DEV',
+    'aleksandrdergelev' => 'DEV',
+    '88fd63c1-b4e2-40d1-8c09-05631b00540c' => 'OPS',
+    'anvodola' => 'OPS',
+    );
 
 $year = strftime('%Y');
 $start_date = isset($_POST['start_date']) ? $_POST['start_date'] : date('Y-m-01');
@@ -60,19 +56,19 @@ function getTotalFromJira($url)
 
 function getTotal($user, $start_date, $end_date)
 {
-    $url_total = 'https://acesse.atlassian.net/rest/api/2/search?maxResults=0&fields=id&jql=assignee%20changed%20to%20'.$user.'%20during%20('.$start_date.','.$end_date.')%20AND%20assignee%20was%20'.$user.'%20during%20('.$start_date.','.$end_date.')';
+    $url_total = "https://acesse.atlassian.net/rest/api/2/search?maxResults=0&fields=id&jql=assignee+changed+to+({$user})+during+({$start_date},{$end_date})";
     return getTotalFromJira($url_total);
 }
 
 function getClosed($user, $start_date, $end_date)
 {
-    $url_closed = 'https://acesse.atlassian.net/rest/api/2/search?maxResults=0&fields=id&jql=status+was+Closed+BY+'.$user.'+AND+status+changed+DURING('.$start_date.','.$end_date.')';
+    $url_closed = "https://acesse.atlassian.net/rest/api/2/search?maxResults=0&fields=id&jql=status+was+Closed+BY+({$user})+AND+status+changed+DURING+({$start_date},{$end_date})";
     return getTotalFromJira($url_closed);
 }
 
 function getResolved($user, $start_date, $end_date)
 {
-    $url_resolved = 'https://acesse.atlassian.net/rest/api/2/search?maxResults=0&fields=id&jql=status+was+in+(Verified,Resolved)+by+'.$user.'+AND+updatedDate<='.$end_date.'+AND+updatedDate>='.$start_date.'+AND+status+was+in+(Verified,Resolved)+before+'.$end_date.'+AND+status+was+in+(Verified,Resolved)+after+'.$start_date.'';
+    $url_resolved = "https://acesse.atlassian.net/rest/api/2/search?maxResults=0&fields=id&jql=status+was+in+(Verified,Resolved)+by+({$user})+AND+updatedDate<={$end_date}+AND+updatedDate>={$start_date}+AND+status+was+in+(Verified,Resolved)+before+{$end_date}+AND+status+was+in+(Verified,Resolved)+after+{$start_date}";
     return getTotalFromJira($url_resolved);
 }
 

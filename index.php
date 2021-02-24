@@ -35,7 +35,7 @@ function getAccount()
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
     $response = curl_exec($ch);
-    var_dump($response);
+    var_dump("https://acesse.atlassian.net?user={$_SESSION['login']}:{$_SESSION['password']}", $response);
     die("Here ");
 
 

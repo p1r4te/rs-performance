@@ -28,23 +28,6 @@ function getAccount()
         $_SESSION['password'] = $_POST['mypassword'];
     }
 
-    $ch = curl_init("https://acesse.atlassian.net?user={$_SESSION['login']}:{$_SESSION['password']}");
-
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HEADER, 1);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($ch, CURLOPT_VERBOSE, true);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
-    $response = curl_exec($ch);
-
-    $header_data= curl_getinfo($ch);
-
-    var_dump("https://acesse.atlassian.net?user={$_SESSION['login']}:{$_SESSION['password']}", $response, $header_data);
-    die("Here ");
-
-
     return $_SESSION['login'] . ':' . $_SESSION['password'];
 }
 

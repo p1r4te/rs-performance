@@ -1,7 +1,7 @@
 ﻿<?php
 session_start();
 $users = array(
-    'amazikin' => 'QA',
+    '5f757fd6bd1298006fbfe687' => 'QA',
     'edgar.simonyan' => 'QA',
     'yreutova' => 'QA',
     '5e5e6a93bbb5110c9a691e79' => 'QA Kuzminova',

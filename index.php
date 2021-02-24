@@ -17,6 +17,8 @@ $users = array(
     'sandruschak' => 'Andruschak S.',
     'aleksandrdergelev' => 'Dergelev A.',
     '5f1e7c78ef11df00257efd6f' => 'Novikov S.',
+    '5f15a2cde407a4001c71d04e' => 'Kudriavtseva K.',
+    '5cdc6eccd210950fd02d471b' => 'Oshepkov O.',
 
     '557058%3A88fd63c1-b4e2-40d1-8c09-05631b00540c' => 'Petrov E.',
     'anvodola' => 'Vodolazsky A.',
@@ -39,6 +41,8 @@ $users_in_dep = [
     'sandruschak' => 'DEV',
     'aleksandrdergelev' => 'DEV',
     '5f1e7c78ef11df00257efd6f' => 'DEV',
+    '5f15a2cde407a4001c71d04e' => 'DEV',
+    '5cdc6eccd210950fd02d471b' => 'DEV',
 
     '557058%3A88fd63c1-b4e2-40d1-8c09-05631b00540c' => 'OPS',
     'anvodola' => 'OPS',

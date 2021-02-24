@@ -42,6 +42,8 @@ function getTotalFromJira($url)
         $headers[] = 'Content-Type: application/json';
         $headers[] = 'Authorization: Basic '.$encodeAccount;
 
+        var_dump($headers);
+
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
@@ -63,7 +65,6 @@ function getTotal($user, $start_date, $end_date)
 function getClosed($user, $start_date, $end_date)
 {
     $url_closed = "https://acesse.atlassian.net/rest/api/2/search?maxResults=0&fields=id&jql=status+was+Closed+BY+({$user})+AND+status+changed+DURING+({$start_date},{$end_date})";
-    $url_closed = "https://acesse.atlassian.net/rest/api/2/search?maxResults=0&fields=id&jql=status+was+Closed+BY+(5f757fd6bd1298006fbfe687)+AND+status+changed+DURING+(2021-02-01,2021-02-24)";
     return getTotalFromJira($url_closed);
 }
 

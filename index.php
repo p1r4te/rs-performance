@@ -18,7 +18,7 @@ session_start();
 //    );
 
 $users = array(
-    'Andrey+Batakov' => 'DEV',
+    '"Andrey Batakov"' => 'DEV',
 );
 
 $year = strftime('%Y');

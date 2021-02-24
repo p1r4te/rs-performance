@@ -1,7 +1,7 @@
 ﻿<?php
 session_start();
 $users = array(
-    '5f757fd6bd1298006fbfe687' => 'QA',
+    '5f757fd6bd1298006fbfe687' => 'QA Mazikin',
     'edgar.simonyan' => 'QA',
     'yreutova' => 'QA',
     '5e5e6a93bbb5110c9a691e79' => 'QA Kuzminova',
@@ -56,7 +56,7 @@ function getTotalFromJira($url)
 
 function getTotal($user, $start_date, $end_date)
 {
-    $url_total = 'https://acesse.atlassian.net/rest/api/2/search?maxResults=0&fields=id&jql=assignee+changed+to+'.$user.'+during+('.$start_date.','.$end_date.')+AND+assignee+was+'.$user.'+during+('.$start_date.','.$end_date.')';
+    $url_total = 'https://acesse.atlassian.net/rest/api/2/search?maxResults=0&fields=id&jql=assignee%20changed%20to%20'.$user.'%20during%20('.$start_date.','.$end_date.')%20AND%20assignee%20was%20'.$user.'%20during%20('.$start_date.','.$end_date.')';
     return getTotalFromJira($url_total);
 }
 
